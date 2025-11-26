@@ -6,16 +6,24 @@ export const useVisitorTracking = () => {
   const location = useLocation();
 
   useEffect(() => {
-    // Track initial visit
+    // Track initial visit with error handling
     const trackInitialVisit = async () => {
-      await visitorTracking.trackVisitor();
+      try {
+        await visitorTracking.trackVisitor();
+      } catch (error) {
+        console.warn('Visitor tracking failed - likely backend not running:', error);
+      }
     };
 
     trackInitialVisit();
 
     // Send page views before unload
     const handleBeforeUnload = () => {
-      visitorTracking.sendPageViews();
+      try {
+        visitorTracking.sendPageViews();
+      } catch (error) {
+        console.warn('Failed to send page views:', error);
+      }
     };
 
     window.addEventListener('beforeunload', handleBeforeUnload);
@@ -27,7 +35,11 @@ export const useVisitorTracking = () => {
 
   useEffect(() => {
     // Track page view on route change
-    visitorTracking.trackPageView(location.pathname);
+    try {
+      visitorTracking.trackPageView(location.pathname);
+    } catch (error) {
+      console.warn('Failed to track page view:', error);
+    }
   }, [location]);
 
   return null;

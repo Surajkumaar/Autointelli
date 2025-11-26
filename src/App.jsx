@@ -8,7 +8,7 @@ import { useVisitorTracking } from './hooks/useVisitorTracking';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ChatBot from './components/ChatBot';
-import CookieConsent from './components/CookieConsent';
+import ConsentBanner from './components/ConsentBanner';
 
 // Import page components
 import Home from './pages/Home';
@@ -72,8 +72,12 @@ function SmoothScrollManager() {
 }
 
 function AppContent() {
-  // Initialize visitor tracking
-  useVisitorTracking();
+  // Initialize visitor tracking (with error handling)
+  try {
+    useVisitorTracking();
+  } catch (error) {
+    console.warn('Visitor tracking failed:', error);
+  }
 
   return (
     <div>
@@ -132,7 +136,7 @@ function AppContent() {
                 </main>
                 <Footer />
                 <ChatBot />
-                <CookieConsent />
+                <ConsentBanner />
               </>
             }
           />

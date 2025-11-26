@@ -12,13 +12,13 @@ export default defineConfig({
   },
   server: {
     host: true,                  // allow access from any network (important)
-    port: 8080,                  // or your preferred dev port
+    port: 5173,                  // default Vite port
     strictPort: true,            // ensures same port each time
     cors: true,                  // enables cross-origin requests
     hmr: {
       protocol: 'ws',            // use ws protocol for local development
       host: 'localhost',
-      port: 8080,
+      port: 5173,
     },
   },
 })

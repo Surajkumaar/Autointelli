@@ -7,7 +7,19 @@ module.exports = [
     name: 'strapi::cors',
     config: {
       enabled: true,
-      origin: ['http://localhost:3000', 'http://localhost:5173', 'http://localhost:8080', 'http://127.0.0.1:3000', 'http://127.0.0.1:5173', 'http://127.0.0.1:8080'],
+      origin: [
+        'http://localhost:3000',
+        'http://localhost:5173', 
+        'http://localhost:8080',
+        'http://127.0.0.1:3000',
+        'http://127.0.0.1:5173',
+        'http://127.0.0.1:8080',
+        // Add your production domains here
+        'https://your-vercel-app.vercel.app',
+        'https://autointelli.vercel.app',
+        // Add custom domain when you get one
+        'https://yourdomain.com'
+      ],
       methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'HEAD', 'OPTIONS'],
       headers: ['Content-Type', 'Authorization'],
       credentials: true,

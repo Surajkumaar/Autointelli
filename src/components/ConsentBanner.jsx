@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import Cookies from 'js-cookie';
-import './CookieConsent.css';
+import './ConsentBanner.css';
 
 const CONSENT_COOKIE = 'autointelli_cookie_consent';
 

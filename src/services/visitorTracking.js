@@ -63,12 +63,17 @@ export const visitorTracking = {
 
       const response = await axios.post(
         `${STRAPI_URL}/api/visitors/track`,
-        visitorData
+        visitorData,
+        { timeout: 3000 } // 3 second timeout
       );
 
       return response.data;
     } catch (error) {
-      console.error('Error tracking visitor:', error);
+      if (error.code === 'ECONNREFUSED' || error.code === 'ERR_NETWORK') {
+        console.info('Backend not available - running in offline mode');
+      } else {
+        console.warn('Error tracking visitor:', error.message);
+      }
       return null;
     }
   },
@@ -79,12 +84,13 @@ export const visitorTracking = {
       const { visitorId } = cookieManager.getTrackingData();
       
       const response = await axios.get(
-        `${STRAPI_URL}/api/visitors/${visitorId}`
+        `${STRAPI_URL}/api/visitors/${visitorId}`,
+        { timeout: 3000 }
       );
 
       return response.data;
     } catch (error) {
-      console.error('Error getting visitor:', error);
+      console.warn('Error getting visitor - backend may be offline:', error.message);
       return null;
     }
   },
@@ -107,11 +113,16 @@ export const visitorTracking = {
 
   // Send all page views
   async sendPageViews() {
-    const pageViews = JSON.parse(sessionStorage.getItem('pageViews') || '[]');
-    
-    if (pageViews.length > 0) {
-      await this.trackVisitor(pageViews);
-      sessionStorage.removeItem('pageViews');
+    try {
+      const pageViews = JSON.parse(sessionStorage.getItem('pageViews') || '[]');
+      
+      if (pageViews.length > 0) {
+        await this.trackVisitor(pageViews);
+        sessionStorage.removeItem('pageViews');
+      }
+    } catch (error) {
+      console.warn('Failed to send page views - backend may be offline');
+      // Keep page views in session storage for retry
     }
   }
 };
