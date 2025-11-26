@@ -2,14 +2,14 @@ import './PlatformOverview.css';
 import { Button } from './ui/button';
 import { RefreshCw, Zap, Target } from 'lucide-react';
 import { useState, useEffect } from 'react';
-import aiCustomerOps from '../assets/MainImages/AI-powered customer operations suite.png';
-import itOpsManagement from '../assets/MainImages/IT Operations Management.png';
-import itOpsManagementV2 from '../assets/MainImages/IT Operations Management Suitev2.png';
-import securityCompliance from '../assets/MainImages/Security & Compliance.png';
-import automationOrchestration from '../assets/MainImages/Automation & Orchestration.png';
-import unifiedAccess from '../assets/MainImages/Unified Access Portal.png';
-import customizableCommand from '../assets/MainImages/Customizable Command Cente.png';
-import customizableCommandV2 from '../assets/MainImages/Customizable Command CenteV2.png';
+import aiCustomerOps from '../assets/MainImages/ai-powered-customer-operations-suite.png';
+import itOpsManagement from '../assets/MainImages/it-operations-management.png';
+import itOpsManagementV2 from '../assets/MainImages/it-operations-management-suitev2.png';
+import securityCompliance from '../assets/MainImages/security-compliance.png';
+import automationOrchestration from '../assets/MainImages/automation-orchestration.png';
+import unifiedAccess from '../assets/MainImages/unified-access-portal.png';
+import customizableCommand from '../assets/MainImages/customizable-command-center.png';
+import customizableCommandV2 from '../assets/MainImages/customizable-command-center-v2.png';
 
 const automationFeatures = [
   {

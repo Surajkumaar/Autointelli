@@ -1,5 +1,5 @@
 import './FeaturesShowcase.css';
-import img1 from '../assets/MainImages/Intelligent Incident Response.png';
+import img1 from '../assets/MainImages/intelligent-incident-response.png';
 import img2 from '../assets/MainImages/unifieddashboard.png';
 import img3 from '../assets/MainImages/AiPoweredAutomation.png';
 

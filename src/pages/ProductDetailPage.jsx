@@ -7,13 +7,13 @@ import './ProductDetailPage.css';
 import './ProductDetailPageTheme.css';
 
 // Import stock images
-import databaseMonitoring from '../assets/stockimages/database monitoring.png';
-import bandwidthMonitoring from '../assets/stockimages/Bandwith Monitoring.png';
-import cloudMonitoring from '../assets/stockimages/Cloud Monitoring.png';
-import hypervisorMonitoring from '../assets/stockimages/Hypervisor Monitoring.png';
-import serviceMonitoring from '../assets/stockimages/service monitoring.png';
-import orchestration from '../assets/stockimages/Orchestration.png';
-import ticketingSystem from '../assets/stockimages/ticketing system automation.png';
+import databaseMonitoring from '../assets/stockimages/database-monitoring.png';
+import bandwidthMonitoring from '../assets/stockimages/bandwidth-monitoring.png';
+import cloudMonitoring from '../assets/stockimages/cloud-monitoring.png';
+import hypervisorMonitoring from '../assets/stockimages/hypervisor-monitoring.png';
+import serviceMonitoring from '../assets/stockimages/service-monitoring.png';
+import orchestration from '../assets/stockimages/orchestration.png';
+import ticketingSystem from '../assets/stockimages/ticketing-system-automation.png';
 import ir1 from '../assets/stockimages/ir1.png';
 import ir2 from '../assets/stockimages/ir2.png';
 import ir3 from '../assets/stockimages/ir3.png';

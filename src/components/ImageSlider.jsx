@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import './ImageSlider.css';
-import img1 from '../assets/MainImages/IT Operations Management.png';
-import img2 from '../assets/MainImages/Security & Compliance.png';
-import img3 from '../assets/MainImages/Automation & Orchestration.png';
-import img4 from '../assets/MainImages/Intelligent Incident Response.png';
+import img1 from '../assets/MainImages/it-operations-management.png';
+import img2 from '../assets/MainImages/security-compliance.png';
+import img3 from '../assets/MainImages/automation-orchestration.png';
+import img4 from '../assets/MainImages/intelligent-incident-response.png';
 
 const ImageSlider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);

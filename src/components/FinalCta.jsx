@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import './FinalCta.css';
-import logoRound from '../assets/MainImages/LOGO ROUND.png';
+import logoRound from '../assets/MainImages/logo-round.png';
 
 const FinalCta = () => {
   return (

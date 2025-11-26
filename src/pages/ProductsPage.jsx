@@ -12,9 +12,9 @@ import intelliFlowImage from '../assets/Products/intelliflow.webp';
 import aliceImage from '../assets/Products/alice.png';
 
 // Import images from stockimages folder for Securita, IntelliDesk, and Asset
-import securitaImage from '../assets/stockimages/Hypervisor Monitoring.png';
-import intelliDeskImage from '../assets/stockimages/ticketing system automation.png';
-import assetImage from '../assets/stockimages/Orchestration.png';
+import securitaImage from '../assets/stockimages/hypervisor-monitoring.png';
+import intelliDeskImage from '../assets/stockimages/ticketing-system-automation.png';
+import assetImage from '../assets/stockimages/orchestration.png';
 
 const ProductsPage = () => {
   // Hero animation uses these 4 images:

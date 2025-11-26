@@ -1,5 +1,5 @@
 import './IntegrationHub.css';
-import seamlessIntegrations from '../assets/MainImages/Seamless Integrations.png';
+import seamlessIntegrations from '../assets/MainImages/seamless-integrations.png';
 
 const integrations = ['Slack', 'Jira', 'ServiceNow', 'PagerDuty', 'AWS', 'Azure', 'Google Cloud', 'Datadog'];
 
